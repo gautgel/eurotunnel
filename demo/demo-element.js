@@ -44,7 +44,7 @@ class DemoElement extends PolymerElement {
         value: function() {
           return {
             name:"aaaaaa",
-            bite:"cul"
+            bite:"culjjjjjj"
           };
         }
       },
