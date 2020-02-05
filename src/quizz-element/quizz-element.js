@@ -21,7 +21,7 @@ class QuizzElement extends PolymerElement {
           padding:0;
         }
       </style>
-      <div class="fullHeight" >
+      <div class="fullHeight hidden" >
         <div class="absolute topLeft">
         <p class="rem2 white">Histoire...</p>
         </div>

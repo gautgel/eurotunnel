@@ -133,6 +133,9 @@ sharedStyle.innerHTML =
 				margin-top:20%;
 			}
 
+			.hidden {
+				overflow: hidden;
+			}
 		</style>
 	</template>`;
 
