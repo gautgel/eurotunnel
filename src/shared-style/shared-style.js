@@ -125,6 +125,14 @@ sharedStyle.innerHTML =
 				font-size: 20px;
 			}
 
+			.position {
+				padding:5%;
+				margin:5%;
+			}
+			.margTop{
+				margin-top:20%;
+			}
+
 		</style>
 	</template>`;
 

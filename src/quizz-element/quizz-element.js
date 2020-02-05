@@ -23,20 +23,20 @@ class QuizzElement extends PolymerElement {
       </style>
       <div class="fullHeight" >
         <div class="absolute topLeft">
-        <p class="rem2">Histoire...</p>
+        <p class="rem2 white">Histoire...</p>
         </div>
         <div class="height50 fullWidth purple flexCenterCenter white">
         <p class="rem2 white"on-click="jeanmich">{{question.question}}</p>
-
         </div>
-        <div class="height50 fullWidth">
-          <div on-click="awnser" class$="{{btnClass1}}">
+
+        <div class="height50 fullWidth question.repThree margTop">
+          <div on-click="awnser" class$="{{btnClass1}} position">
             <p>{{question.repOne}}</p>
           </div>
-          <div on-click="awnser" class$="{{btnClass2}}">
+          <div on-click="awnser" class$="{{btnClass2}} position">
             <p>{{question.repTwo}}</p>
           </div>
-          <div on-click="awnser" class$="{{btnClass3}}">
+          <div on-click="awnser" class$="{{btnClass3}} position">
             <p>{{question.repThree}}</p>
           </div>
         </div>
@@ -84,8 +84,21 @@ class QuizzElement extends PolymerElement {
         this.set('btnClass1', "greenBtn");
         this.set('btnClass2', "redBtn");
         this.set('btnClass3', "redBtn");
+
         break;
       case"a":
+        this.set('btnClass1', "redBtn");
+        this.set('btnClass2', "redBtn");
+        this.set('btnClass3', "greenBtn");
+        break;
+
+        case"cheval":
+        this.set('btnClass1', "redBtn");
+        this.set('btnClass2', "redBtn");
+        this.set('btnClass3', "greenBtn");
+        break;
+
+        case"tomate":
         this.set('btnClass1', "redBtn");
         this.set('btnClass2', "redBtn");
         this.set('btnClass3', "greenBtn");
@@ -105,16 +118,19 @@ class QuizzElement extends PolymerElement {
         this.set('question.repOne', "a");
         this.set('question.repTwo', "b");
         this.set('question.repThree', "c");
+        this.set('question.question', "question deux")
         break;
       case "a":
         this.set('question.repOne', "cheval");
         this.set('question.repTwo', "licorne");
         this.set('question.repThree', "faisan");
+        this.set('question.question', "question trois")
         break;
       case"cheval":
       this.set('question.repOne', "tomate");
       this.set('question.repTwo', "salade");
       this.set('question.repThree', "oignon");
+      this.set('question.question', "question quatre")
         break;
     }
   }
