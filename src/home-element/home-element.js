@@ -49,7 +49,7 @@ class HomeElement extends PolymerElement {
         }
 			</style>
 
-      <div class="relative top purple px95 white flexCenterCenter">
+      <div class="relative top purple px30 white flexCenterCenter">
 
         <template is="dom-if" if="{{stepOne}}">
           <p class="textAlignCenter paddSide10 fontWeight">Bienvenue aux portes ouvertes d'Eurotunnel.</p>
@@ -87,6 +87,7 @@ class HomeElement extends PolymerElement {
       </div>
 
       <form-element hidden$="{{hidden}}"></form-element>
+
 		`;
 	}
 
