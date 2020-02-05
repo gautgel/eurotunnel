@@ -2,6 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/iron-icons/iron-icons.js';
 import '../../icon-toggle.js';
 import '../home-element/home-element.js';
+import '../quizz-element/quizz-element.js';
 
 class AppElement extends PolymerElement {
   static get template() {
@@ -15,7 +16,7 @@ class AppElement extends PolymerElement {
           width : 100%;
         }
       </style>
-      <home-element></home-element>
+      <quizz-element></quizz-element>
     `;
   }
 

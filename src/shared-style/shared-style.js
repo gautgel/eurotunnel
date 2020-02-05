@@ -87,6 +87,10 @@ sharedStyle.innerHTML =
 				height: 100%;
 			}
 
+			.height50{
+				height: 50%;
+			}
+
 			.pointer:hover {
 				cursor: pointer;
 			}
@@ -101,6 +105,24 @@ sharedStyle.innerHTML =
 			}
 			.blueBtn:disabled, .blueBtn[disabled]{
 				background-color: rgb(168,194,208);
+			}
+
+			.greenBtn {
+				padding: 10px 20px;
+				background-color: green; 
+				color: white;
+				border: none;
+				border-radius: 5px;
+				font-size: 20px;
+			}
+
+			.redBtn {
+				padding: 10px 20px;
+				background-color: red; 
+				color: white;
+				border: none;
+				border-radius: 5px;
+				font-size: 20px;
 			}
 
 		</style>
