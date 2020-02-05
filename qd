@@ -1,0 +1,38 @@
+[1mdiff --git a/demo/demo-element.js b/demo/demo-element.js[m
+[1mindex 1b334fc..8402ec0 100644[m
+[1m--- a/demo/demo-element.js[m
+[1m+++ b/demo/demo-element.js[m
+[36m@@ -43,8 +43,8 @@[m [mclass DemoElement extends PolymerElement {[m
+         type : Object,[m
+         value: function() {[m
+           return {[m
+[31m-            name:"aaaaaa",[m
+[31m-            bite:"culjjjjjj"[m
+[32m+[m[32m            name:"aaaaa",[m
+[32m+[m[32m            bite:"ljjjjjj"[m
+           };[m
+         }[m
+       },[m
+[36m@@ -52,7 +52,7 @@[m [mclass DemoElement extends PolymerElement {[m
+         type: Array,[m
+         value() {[m
+           return [[m
+[31m-            "poule", "chien", "pamplemousse"[m
+[32m+[m[32m            "poule", "cien", "pamplemousse"[m
+           ][m
+         }[m
+       }[m
+[36m@@ -61,11 +61,11 @@[m [mclass DemoElement extends PolymerElement {[m
+ [m
+   constructor() {[m
+     super();[m
+[31m-    console.log("go");[m
+[32m+[m[32m    console.log("o");[m
+   }[m
+ [m
+   yo(){[m
+[31m-    console.log('yo');[m
+[32m+[m[32m    console.log('o');[m
+   }[m
+ }[m
+ customElements.define('demo-element', DemoElement);[m
