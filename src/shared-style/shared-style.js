@@ -167,7 +167,6 @@ sharedStyle.innerHTML =
 				background-color: rgb(168,194,208);
 			}
 
-<<<<<<< HEAD
 			.greenBtn {
 				padding: 10px 20px;
 				background-color: green; 
@@ -175,6 +174,10 @@ sharedStyle.innerHTML =
 				border: none;
 				border-radius: 5px;
 				font-size: 20px;
+			}
+
+			.hidden {
+				overflow : hidden;
 			}
 
 			.redBtn {
@@ -196,11 +199,6 @@ sharedStyle.innerHTML =
 
 			.bgWhite{
 				background-color:white;
-=======
-
-			.hidden {
-				overflow : hidden;
->>>>>>> map
 			}
 		</style>
 	</template>`;
