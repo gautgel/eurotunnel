@@ -8,7 +8,9 @@ sharedStyle.innerHTML =
 			.purple{
 				background: linear-gradient(142deg, rgba(26,26,27,1) 0%, rgba(71,55,91,1) 46%, rgba(133,112,159,1) 100%, rgba(255,255,255,0) 100%);
 			}
-
+			.whiteBg{
+				background-color : #FFF;
+			}
 
 			.rem2{
 				font-size : 2rem;
@@ -134,6 +136,15 @@ sharedStyle.innerHTML =
 			.fullHeight {
 				height: 100%;
 			}
+			.height80 {
+				height : 80%;
+			}
+			.height85 {
+				height : 85%;
+			}
+			.height15 {
+				height : 15%;
+			}
 
 			.height50{
 				height: 50%;
@@ -156,6 +167,7 @@ sharedStyle.innerHTML =
 				background-color: rgb(168,194,208);
 			}
 
+<<<<<<< HEAD
 			.greenBtn {
 				padding: 10px 20px;
 				background-color: green; 
@@ -184,6 +196,11 @@ sharedStyle.innerHTML =
 
 			.bgWhite{
 				background-color:white;
+=======
+
+			.hidden {
+				overflow : hidden;
+>>>>>>> map
 			}
 		</style>
 	</template>`;

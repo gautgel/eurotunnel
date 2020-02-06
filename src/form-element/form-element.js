@@ -2,6 +2,8 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/iron-icons/iron-icons.js';
 import '../../icon-toggle.js'
 import '../shared-style/shared-style.js'
+import '../map-element/map-element.js'
+
 
 class FormElement extends PolymerElement {
   static get template() {
@@ -17,10 +19,10 @@ class FormElement extends PolymerElement {
           left : 0;
         }
 
-        div {
+        .main {
           height : 100%;
           width : 100%;
-          z-index : 99999;
+          z-index : 999;
         }
 
         .company{
@@ -29,7 +31,7 @@ class FormElement extends PolymerElement {
 
       </style>
         
-      <div class=" purple flexCenterCenter">
+      <div class="main purple flexCenterCenter">
         <form action="" method="get" class="relative flexColumn px20 white">
 
           <label class="">Prénom</label>
@@ -55,15 +57,19 @@ class FormElement extends PolymerElement {
             <input class="input" type="text"></input>
           </div>
 
-          <input type="submit" class="blueBtn"></input>
+          <input type="submit" on-click="openMap" class="blueBtn"></input>
         </form>
-
       </div>
+
     `;
   }
 
   static get properties() {
     return {
+      hidden : {
+        type : Boolean,
+        value : true
+      }
     }
   }
 
@@ -79,6 +85,12 @@ class FormElement extends PolymerElement {
     {
       this.shadowRoot.querySelector(".company").style.display = "none";
     }
+  }
+
+  openMap(e) {
+    e.preventDefault()
+    var map = document.createElement("map-element");
+    document.body.appendChild(map);
   }
 }
 customElements.define('form-element', FormElement);
