@@ -1,6 +1,6 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../shared-style/shared-style.js'
-
+import '../map-element/mapdeux-element.js'
 /* Création d'un élément Quizz qui sera dynamique  */
 
 class QuizzElement extends PolymerElement {
@@ -15,7 +15,8 @@ class QuizzElement extends PolymerElement {
           width : 100vw;
           top : 0;
           left : 0;
-          overflow : hidden
+          overflow : hidden;
+          z-index : 99999999999999999;
         }
         .w20{
           width : 200px;
@@ -42,6 +43,7 @@ class QuizzElement extends PolymerElement {
         .divQuestion {
           position : relative;
           z-index : 99;
+          background-color : white;
         }
         .containCircle{
           width : 120px;
@@ -74,48 +76,51 @@ class QuizzElement extends PolymerElement {
           border:2px solid white;
           background-color:red;
         }
+
+        #endQuizzBtn{
+          display : none;
+          position : absolute;
+          top : 20%;
+          left : 50%;
+          transform : translateY(-50%) translateX(-50%);
+        }
       </style>
-      <div class="fullHeight" >
-      <div class="absolute topLeft">
-      <p class="rem15 white">Histoire...</p>
-      </div>
-      <div class="height50 fullWidth purple flexCenterCenter white">
-      <p class="rem15 white"on-click="jeanmich">{{question.question}}</p>
-      </div>
-  
-      <div class="absolute containCircle">
-      <div on-click="awnser" class$="{{cercle1}}"></div>
-      <div on-click="awnser" class$="{{cercle2}}"></div>
-      <div on-click="awnser" class$="{{cercle3}}"></div>
-      </div>
-      <div class="popup" onclick="myFunction()">Click me!
-      <span class="popuptext" id="myPopup">Popup text...</span>
-      </div>
-  
-      <div class="absolute w20 bgWhite">
-      </div>
-      <div class="absolute w30 bgWhite">
-      </div>
-  
-
-
-
-
-
-
-
-      <div class="height50 fullWidth divQuestion margTop">
-        <div on-click="awnser" class$="{{btnClass1}} position">
-          <p>{{question.repOne}}</p>
+      <div class="fullHeight mainQuizz" >
+        <div class="absolute topLeft">
+          <p class="rem15 white">Histoire...</p>
         </div>
-        <div on-click="awnser" class$="{{btnClass2}} position">
-          <p>{{question.repTwo}}</p>
+        <div class="height50 fullWidth purple flexCenterCenter white">
+          <p class="rem15 white"on-click="jeanmich">{{question.question}}</p>
         </div>
-        <div on-click="awnser" class$="{{btnClass3}} position">
-          <p>{{question.repThree}}</p>
+  
+        <div class="absolute containCircle">
+          <div on-click="awnser" class$="{{cercle1}}"></div>
+          <div on-click="awnser" class$="{{cercle2}}"></div>
+          <div on-click="awnser" class$="{{cercle3}}"></div>
+        </div>
+        <div class="popup" onclick="myFunction()">Click me!
+          <span class="popuptext" id="myPopup">Popup text...</span>
+        </div>
+  
+        <div class="absolute w20 bgWhite">
+        </div>
+        <div class="absolute w30 bgWhite">
+        </div>
+
+        <div class="height50 fullWidth divQuestion margTop">
+          <div on-click="awnser" class$="rep {{btnClass1}} position">
+            <p>{{question.repOne}}</p>
+          </div>
+          <div on-click="awnser" class$="rep {{btnClass2}} position">
+            <p>{{question.repTwo}}</p>
+          </div>
+          <div on-click="awnser" class$="rep {{btnClass3}} position">
+            <p>{{question.repThree}}</p>
+          </div>
+
+          <button id="endQuizzBtn" class="blueBtn" on-click="returnMap">Terminer le quizz</button>
         </div>
       </div>
-    </div>
     `;
   }
 
@@ -188,6 +193,7 @@ class QuizzElement extends PolymerElement {
         this.set('btnClass2', "redBtn");
         this.set('btnClass3', "greenBtn");
         break;
+      
     }
     
     setTimeout(this.nextQuestion.bind(this), 1500);
@@ -239,8 +245,25 @@ class QuizzElement extends PolymerElement {
         this.set('question.repThree', "6 ans");
         this.set('question.question', "Combien de temps a duré la construction du tunnel?")
         break;
+      case "12 ans":
+        this.endQuizz();
+        break;
     }
   }
+  endQuizz() {
+    console.log('end')
+    var reps = this.shadowRoot.querySelectorAll(".rep");
 
+    reps.forEach(elem => {
+      elem.parentNode.removeChild(elem);
+    });
+
+    this.shadowRoot.querySelector("#endQuizzBtn").style.display = "flex";
+  }
+  returnMap (e) {
+    e.preventDefault();
+    var mapDeux = document.createElement("mapdeux-element");
+    document.body.appendChild(mapDeux);
+  }
 }
 customElements.define('quizz-element', QuizzElement);

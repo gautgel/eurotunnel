@@ -16,7 +16,7 @@ class AppElement extends PolymerElement {
           width : 100%;
         }
       </style>
-      <quizz-element></quizz-element>
+      <home-element></home-element>
     `;
   }
 

@@ -10,7 +10,7 @@ import '@polymer/polymer/lib/elements/dom-if.js';
 
 
 
-class MapElement extends PolymerElement {
+class MapdeuxElement extends PolymerElement {
 	static get template() {
 		return html`
 			<style include="shared-style">
@@ -22,12 +22,12 @@ class MapElement extends PolymerElement {
 					width : 100vw;
 					top : 0;
 					left : 0;
+          z-index : 99999999999999999999999999;
 				}
 
 				.main {
 					height : 100%;
 					width : 100%;
-					z-index : 9999999;
         }	
         svg {
           position : absolute;
@@ -56,7 +56,7 @@ class MapElement extends PolymerElement {
           position : absolute;
           left : 23px;
           width : 4px;
-          height : 0%;
+          height : 16.5%;
           background-color : #3B99C4;
           bottom : 0%;
           transition : .5s;
@@ -138,7 +138,7 @@ class MapElement extends PolymerElement {
           top : 26px;
         }
         .rbCinq {
-          top : 26px;
+          top : 0px;
         }
         .rbSix {
           top : 0px;
@@ -416,12 +416,12 @@ class MapElement extends PolymerElement {
 
   progressBar() {
     var bar = this.shadowRoot.querySelector(".barb");    
-    var ball = this.shadowRoot.querySelector(".rbCinq"); 
-    var height = 1;
+    var ball = this.shadowRoot.querySelector(".rbQuatre"); 
+    var height = 16.5;
     var id = setInterval(frame, 500);
 
     function frame() {
-      if (height >= 16.5) {
+      if (height >= 35.5) {
         clearInterval(id);
         ball.style.top = "0";
       } else {
@@ -440,4 +440,4 @@ class MapElement extends PolymerElement {
     document.body.appendChild(quizz);
   }
 }
-customElements.define('map-element', MapElement);
+customElements.define('mapdeux-element', MapdeuxElement);
