@@ -23,6 +23,10 @@ sharedStyle.innerHTML =
 				font-size : 30px;
 			}
 
+			.rem15{
+				font-size : 1.5rem;
+			}
+
 
 			.textAlignCenter {
 				text-align: center;
@@ -133,8 +137,8 @@ sharedStyle.innerHTML =
 				margin-top:20%;
 			}
 
-			.hidden {
-				overflow: hidden;
+			.bgWhite{
+				background-color:white;
 			}
 		</style>
 	</template>`;
