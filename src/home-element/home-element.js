@@ -46,6 +46,7 @@ class HomeElement extends PolymerElement {
         img {
           width: 50px;
           height: auto;
+          user-select: none;
         }
 			</style>
 
@@ -145,6 +146,7 @@ class HomeElement extends PolymerElement {
   }
 
   checkStep() {
+    this.shadowRoot.querySelector("#myButton").blur();
     switch(this.number)
     {
       case 1:

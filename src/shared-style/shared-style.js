@@ -104,10 +104,10 @@ sharedStyle.innerHTML =
 			}
 
 			.input {
-					background: transparent;
-          border: none;
-					border-bottom: 1px solid white;
-					width: 70%;
+				background: transparent;
+				border: none;
+				border-bottom: 1px solid white;
+				width: 70%;
 			}
 			input:focus{
 				color: #fff;
@@ -142,6 +142,7 @@ sharedStyle.innerHTML =
 				border: none;
 				border-radius: 5px;
 				font-size: 20px;
+				user-select: none;
 			}
 			.blueBtn:disabled, .blueBtn[disabled]{
 				background-color: rgb(168,194,208);
