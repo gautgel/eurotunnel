@@ -19,8 +19,11 @@ sharedStyle.innerHTML =
 			.rem3{
 				font-size : 3rem;
 			}
-			.px95{
+			.px30{
 				font-size : 30px;
+			}
+			.px20{
+				font-size: 20px;
 			}
 
 			.rem15{
@@ -47,6 +50,12 @@ sharedStyle.innerHTML =
 				display : flex;
 				align-items : center;
 				justify-content : center;
+			}
+			.flexColumn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
 			}
 
 
@@ -82,6 +91,41 @@ sharedStyle.innerHTML =
 			.noMargin {
 				margin : 0;
 			}
+			.marginBottom30 {
+				margin-bottom: 40px;
+			}
+			.marginBottom20 {
+				margin-bottom: 20px;
+			}
+			.marginBottom10 {
+				margin-bottom: 10px;
+			}
+			.marginLeft25{
+				margin-left: 25px;
+			}
+			.marginRight10{
+				margin-right: 10px;
+			}
+
+			.input {
+				background: transparent;
+				border: none;
+				border-bottom: 1px solid white;
+				width: 70%;
+			}
+			input:focus{
+				color: #fff;
+				outline: none;
+				font-size: 20px;
+				font-family: 'Varela Round';
+				text-align: center;
+			}
+			input:not(:focus){
+				color: #fff;
+				font-size: 20px;
+				font-family: 'Varela Round';
+				text-align: center;
+			}
 
 
 			.fullWidth {
@@ -106,6 +150,7 @@ sharedStyle.innerHTML =
 				border: none;
 				border-radius: 5px;
 				font-size: 20px;
+				user-select: none;
 			}
 			.blueBtn:disabled, .blueBtn[disabled]{
 				background-color: rgb(168,194,208);
