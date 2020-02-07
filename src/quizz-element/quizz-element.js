@@ -17,13 +17,14 @@ class QuizzElement extends PolymerElement {
           left : 0;
           overflow : hidden;
           z-index : 99999999999999999;
+          background-color : #FFFFFF;
         }
         .w20{
-          width : 200px;
-          height :200px;
+          width : 250px;
+          height :250px;
           border-radius :50%;
-          top : 45%;
-          right : 201px; 
+          top : 44%;
+          left : -35px; 
 
         }
         
@@ -31,7 +32,7 @@ class QuizzElement extends PolymerElement {
           width : 270px;
           height :270px;
           border-radius :50%;
-          left : 130px;
+          right: -10px;
           top : 35%;
 
         }
@@ -51,6 +52,10 @@ class QuizzElement extends PolymerElement {
           top:39%;
           left:5%;
           display:flex;
+        }
+        .titleCont {
+          padding-left : 10px;
+          padding-top : 10px;
         }
         .circle{
           width :100%;
@@ -86,8 +91,8 @@ class QuizzElement extends PolymerElement {
         }
       </style>
       <div class="fullHeight mainQuizz" >
-        <div class="absolute topLeft">
-          <p class="rem15 white">Histoire...</p>
+        <div class="absolute topLeft titleCont">
+          <p class="rem15 white histoire">Histoire...</p>
         </div>
         <div class="height50 fullWidth purple flexCenterCenter white">
           <p class="rem15 white"on-click="jeanmich">{{question.question}}</p>
@@ -97,9 +102,6 @@ class QuizzElement extends PolymerElement {
           <div on-click="awnser" class$="{{cercle1}}"></div>
           <div on-click="awnser" class$="{{cercle2}}"></div>
           <div on-click="awnser" class$="{{cercle3}}"></div>
-        </div>
-        <div class="popup" onclick="myFunction()">Click me!
-          <span class="popuptext" id="myPopup">Popup text...</span>
         </div>
   
         <div class="absolute w20 bgWhite">
